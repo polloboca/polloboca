@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones sobre Boca Juniors</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #FFFFF0;
+        }
+
+        /* Contenedor principal */
+        #app {
+            padding: 20px;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #0033A0; /* Azul oscuro */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        #escudo {
+            max-width: 80px; /* Ajusta el tamaño del escudo */
+            height: auto;
+        }
+
+        /* Estilos para la sección de comentarios */
+        #comments {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0033A0;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #002080;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .comment strong {
+            display: block;
+        }
+
+        .editButton, .deleteButton {
+            background-color: #0033A0;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .editButton:hover, .deleteButton:hover {
+            background-color: #002080;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #0033A0;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 600px) {
+            #escudo {
+                max-width: 60px; /* Reduce el tamaño del escudo en dispositivos móviles */
+            }
+
+            textarea {
+                height: 80px;
+            }
+
+            button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="images/escudoboca.png" alt="Escudo de Boca Juniors" id="escudo">
+            <h1>Opiniones sobre Boca Juniors</h1>
+        </header>
+        <main>
+            <section id="comments">
+                <h2>Deja tu Opinión</h2>
+                <div id="commentsSection">
+                    <!-- Aquí se cargarán los comentarios -->
+                </div>
+                <form id="commentForm">
+                    <textarea id="commentText" placeholder="Escribe tu comentario aquí..." required></textarea>
+                    <input type="text" id="username" placeholder="Nombre (opcional)">
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Boca Juniors Fan Site. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
